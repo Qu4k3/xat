@@ -113,8 +113,8 @@ body::-webkit-scrollbar-thumb {
     padding: 10px;
 }
 
-.message span {    
-  background-color: white;
+.message span {
+  background-color: lightskyblue;
   border-radius: 10px;
   padding: 10px;
   width: auto;
@@ -132,15 +132,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 .message span:before {
-  content:"";
-  position:absolute;
-  display:block;
-  left:0;
-  border-right:6px solid #fff;
-  border-top: 6px solid transparent;
-  border-bottom:6px solid transparent;
-  top:12px;
-  margin-left:-6px;
+    content:"";
+    position:absolute;
+    display:block;
+    left:0;
+    border-right:6px solid lightskyblue;
+    border-top: 6px solid transparent;
+    border-bottom:6px solid transparent;
+    top:12px;
+    margin-left:-6px;
 }
 
 .message_s span:after {
@@ -148,7 +148,7 @@ body::-webkit-scrollbar-thumb {
   position:absolute;
   display:block;
   left:100%;
-  border-left: 6px solid #fff;
+  border-left: 6px solid pink;
   border-top: 6px solid transparent;
   border-bottom: 6px solid transparent;
   top:12px;
