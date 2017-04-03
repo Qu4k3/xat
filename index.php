@@ -98,7 +98,6 @@
 
 			<section class="col-xs-12 col-sm-6 col-md-8" style="background-color:white; padding: 30px; margin-bottom: 20px;">
 							
-
 				<form method="POST" action="private/messages.php">	
 
 					<section class="row">
