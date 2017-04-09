@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+if (!isset($_SESSION["user"])){
+    header("location:private/login.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,8 +42,9 @@
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="navbar-collapse">
-	      
-	    </div>
+	        <?php echo "<span>Bienvenido:".$_SESSION['user']."</span>" ?>
+            <a href="private/logout.php">logout</a>
+        </div>
 	  </div>
 	</nav>
 
