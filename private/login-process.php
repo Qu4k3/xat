@@ -6,6 +6,7 @@ $conn = mysqli_connect("localhost","root","","xat_db");
 if(isset($_POST["username"]) && isset($_POST["password"])){
     $user = mysqli_real_escape_string($conn, $_POST["username"]);
     $pass = mysqli_real_escape_string($conn, $_POST["password"]);
+
     $sql = "SELECT username FROM users WHERE username='$user' AND password='$pass'";
     $result = mysqli_query($conn, $sql);
     $num_row = mysqli_num_rows($result);

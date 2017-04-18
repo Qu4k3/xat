@@ -35,7 +35,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .search-box {
-  background-color:white;
   padding: 20px;
   margin-bottom: 20px;
   position: fixed;
@@ -49,7 +48,7 @@ body::-webkit-scrollbar-thumb {
   padding: 0;
   margin: 0;
 
-  max-height: 200px;
+  max-height: 300px;
   overflow-y: scroll; 
 }
 

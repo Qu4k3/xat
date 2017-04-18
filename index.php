@@ -29,21 +29,13 @@ if (!isset($_SESSION["user"])){
 			?>	
 
 	<nav class="navbar navbar-default navbar-fixed-top">
-	  <div class="container-fluid">	    
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" href="#">Xat</a>
-	    </div>
+	  <div class="container">	   
+	    
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="navbar-collapse">
-	        <?php echo "<span>Bienvenido:".$_SESSION['user']."</span>" ?>
-            <a href="private/logout.php">logout</a>
+	    <div class="nav navbar-nav navbar-right" style="padding-top:15px;">
+	        <?php echo "<span>Welcome, ".$_SESSION['user']."</span>" ?>
+            <a href="private/logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> sign out</a>
         </div>
 	  </div>
 	</nav>
@@ -93,10 +85,10 @@ if (!isset($_SESSION["user"])){
 
 				    <ul id="usersList">
 				    	<?php
-							$result = $conn->query("SELECT username FROM Users ORDER BY username ASC");
+							$result = $conn->query("SELECT username, avatar FROM Users ORDER BY username ASC");
 								if($result->num_rows > 0){
 									while ($fila = $result->fetch_assoc()) {									
-									echo "<li><a href='javascript:'>".$fila['username']."</a></li>";
+									echo "<li><a href='javascript:'><img class='avatar_s' src='assets/img/avatar/".$fila['avatar']."' alt=''> ".$fila['username']."</a></li>";
 									}										
 								}
 							$conn->close();

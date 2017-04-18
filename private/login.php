@@ -39,10 +39,20 @@ if (isset($_SESSION["user"])){
                 </div>
 
                 <div class="form-group">
-                    <input type="button" name="login" id="login" value="Login" class="btn btn-success">
+                    <input type="button" name="login" id="login" value="Login" class="btn btn-default">
                 </div>
 
             </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3" style="text-align: center;">
+            
+                <br>or<br><br>
+                
+                <a class="btn btn-success" role="button" href="register.php">Register</a>
+            
         </div>
     </div>
 </div>
