@@ -1,17 +1,17 @@
 <?php
 
 session_start();
-$connect = mysqli_connect("localhost","root","","xat_db");
+$conn = mysqli_connect("localhost","root","","xat_db");
 
-if(isset($_POST["user"]) && isset($_POST["pass"])){
-    $user = mysqli_real_escape_string($connect, $_POST["user"]);
-    $pass = mysqli_real_escape_string($connect, $_POST["pass"]);
-    $sql = "SELECT user FROM users WHERE (user='$user' OR email='$user') AND pass='$pass'";
-    $result = mysqli_query($connect, $sql);
+if(isset($_POST["username"]) && isset($_POST["password"])){
+    $user = mysqli_real_escape_string($conn, $_POST["username"]);
+    $pass = mysqli_real_escape_string($conn, $_POST["password"]);
+    $sql = "SELECT username FROM users WHERE username='$user' AND password='$pass'";
+    $result = mysqli_query($conn, $sql);
     $num_row = mysqli_num_rows($result);
     if ($num_row == "1") {
         $data = mysqli_fetch_array($result);
-        $_SESSION["user"] = $data["user"];
+        $_SESSION["user"] = $data["username"];
         echo "1";
     } else {
         echo "error";

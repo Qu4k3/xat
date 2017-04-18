@@ -1,7 +1,7 @@
 <?php
 
-    $user = $_POST['user'];
-    $pass = $_POST['pass'];
+    $user = $_POST['username'];
+    $pass = $_POST['password'];
 
     if (!$user & !$pass) {
 

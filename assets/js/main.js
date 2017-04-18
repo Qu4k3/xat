@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
     $('#login').click(function(){
-        var user = $('#username').val();
-        var pass = $('#password').val();
-        if($.trim(user).length > 0 && $.trim(pass).length > 0){
+        var username = $('#username').val();
+        var password = $('#password').val();
+        if($.trim(username).length > 0 && $.trim(password).length > 0){
             $.ajax({
                 url:"login-process.php",
                 method:"POST",
-                data:{user:user, pass:pass},
+                data:{username:username, password:password},
                 cache:"false",
                 beforeSend:function() {
                     $('#login').val("Conectando...");
@@ -17,7 +17,7 @@ $(document).ready(function() {
                     if (data=="1") {
                         $(location).attr('href','../index.php');
                     } else {
-                        $("#result").html("<div class='alert alert-dismissible alert-danger'><button type='button' class='close' data-dismiss='alert'>&times;</button><strong>¡Error!</strong> las credenciales son incorrectas.</div>");
+                        $("#result").html("<div class='alert alert-dismissible alert-danger'><button type='button' class='close' data-dismiss='alert'>&times;</button>The <strong>username</strong> or <strong>password</strong> you have entered is invalid</div>");
                     }
                 }
             });
@@ -30,7 +30,7 @@ $(document).ready(function() {
        var user = $("#username").val();
        var pass = $("#password").val();
 
-       var data = "user=" + user + "&pass=" + pass;
+       var data = "username=" + user + "&password=" + pass;
 
        $.ajax({
            method: "post",
